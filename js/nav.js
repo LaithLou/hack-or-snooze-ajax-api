@@ -3,6 +3,10 @@
 /******************************************************************************
  * Handling navbar clicks and updating navbar
  */
+function openNavForm(evt){
+  evt.preventDefault();
+  
+}
 
 /** Show main list of all stories when click site name */
 
