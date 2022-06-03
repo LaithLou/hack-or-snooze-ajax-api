@@ -21,12 +21,11 @@ class Story {
   }
 
   /** Parses hostname out of URL and returns it. */
-  // TODO:
+
   getHostName() {
     // UNIMPLEMENTED: complete this function!
     console.log(this.url);
     return new URL(this.url).host;
-    return this.url;
   }
 }
 
@@ -88,7 +87,9 @@ class StoryList {
     });
 
     const { story } = response.data;
-
+    //push story to this.stories, so that memory copy is up to date
+    this.stories.unshift(story);
+    
     return new Story({
       storyId: story.storyId,
       title: story.title,

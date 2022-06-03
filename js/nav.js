@@ -5,7 +5,6 @@
  */
 function openNavForm(evt) {
   evt.preventDefault();
-  hidePageComponents();
   $submitForm.show();
 }
 
