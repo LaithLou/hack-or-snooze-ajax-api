@@ -4,7 +4,6 @@
  * Handling navbar clicks and updating navbar
  */
 function openNavForm(evt) {
-  console.log("we are here!");
   evt.preventDefault();
   hidePageComponents();
   $submitForm.show();

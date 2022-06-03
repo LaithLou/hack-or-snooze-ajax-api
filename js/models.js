@@ -24,7 +24,9 @@ class Story {
   // TODO:
   getHostName() {
     // UNIMPLEMENTED: complete this function!
-    return "hostname.com";
+    console.log(this.url);
+    return new URL(this.url).host;
+    return this.url;
   }
 }
 
@@ -84,7 +86,7 @@ class StoryList {
         },
       },
     });
-    
+
     const { story } = response.data;
 
     return new Story({
