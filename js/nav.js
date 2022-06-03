@@ -3,10 +3,14 @@
 /******************************************************************************
  * Handling navbar clicks and updating navbar
  */
-function openNavForm(evt){
+function openNavForm(evt) {
+  console.log("we are here!");
   evt.preventDefault();
-  
+  hidePageComponents();
+  $submitForm.show();
 }
+
+$navSubmit.on("click", openNavForm);
 
 /** Show main list of all stories when click site name */
 

@@ -50,3 +50,11 @@ function putStoriesOnPage() {
 
   $allStoriesList.show();
 }
+
+function handleAddingNewStory(evt) {
+  evt.preventDefault();
+  console.log("hanedelADDIngNewStory");
+  let newStory = addStory();
+}
+
+$submitStory.on("click", handleAddingNewStory);

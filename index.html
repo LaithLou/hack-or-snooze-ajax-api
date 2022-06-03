@@ -38,7 +38,7 @@
     <a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
   </div>
   <div class="nav-right">
-    <a class="nav-link" href="#" id="submit">Submit</a>
+    <a class="nav-link" href="#" id="nav-submit">Submit</a>
     <a class="nav-link" href="#" id="nav-login">login/signup</a>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
     <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
@@ -89,24 +89,22 @@
       <label for="signup-password">password</label>
       <input id="signup-password" autocomplete="new-password" type="password">
     </div>
-    <button type="submit">create account</button>
+    <button type="submit-story">create account</button>
   </form>
 </section>
 
 <section>
-  <form id="submit-form" class="submit-form">
-    <h4>Create Story</h4>
+  <form id="submit-form" class="submit-form hidden">
+    <h4>Create A Story :</h4>
     <div class="story-input">
-      <label></label>
+      <label for="storyName-input"> Title :</label>
       <input id="story-title" type="text">
-      <label></label>
+      <label for="author-input">Author :</label>
       <input id="story-author" type="text">
-      <label></label>
+      <label for="url-inptu"> URL :</label>
       <input id="story-url" type="text">
-      <label></label>
-      <input id="story-body" type="text">
     </div>
-    <button type="submit">send story</button>
+    <button type="submit" id="submit-story">send story</button>
   </form>
 </section>
 

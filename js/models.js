@@ -70,7 +70,6 @@ class StoryList {
    *
    * Returns the new Story instance
    */
-  // TODO:
   async addStory(user, newStory) {
     // UNIMPLEMENTED: complete this function!
     const response = await axios({
