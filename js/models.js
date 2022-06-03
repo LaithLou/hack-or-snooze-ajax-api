@@ -89,7 +89,7 @@ class StoryList {
     const { story } = response.data;
     //push story to this.stories, so that memory copy is up to date
     this.stories.unshift(story);
-    
+
     return new Story({
       storyId: story.storyId,
       title: story.title,
@@ -210,5 +210,17 @@ class User {
       console.error("loginViaStoredCredentials failed", err);
       return null;
     }
+  }
+
+  static async addFavotite(story) {
+    const response = await axios({
+      url: `${BASE_URL}/users/${story.username}/favorites/${story.storyId}`,
+      method: "POST",
+      data: {
+        token: currentUser.token,
+      },
+    });
+
+    const { favorites } = response.data;
   }
 }

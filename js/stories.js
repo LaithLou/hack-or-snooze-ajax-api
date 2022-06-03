@@ -54,23 +54,24 @@ function putStoriesOnPage() {
 /**  handleAddingNewStroy: gathering the values form
  * submit form and adding a new story by calling 'addStory'
  * calling generateStoryMarkUp which appends it to the page.
- * hides submit-form 
+ * hides submit-form
  */
 
 async function handleAddingNewStory(evt) {
   evt.preventDefault();
-  
+
   const storyTitle = $("#story-title").val();
   const storyAuthor = $("#story-author").val();
   const storyURL = $("#story-url").val();
-  
+
   const submitFormInputs = {
     author: storyAuthor,
     title: storyTitle,
     url: storyURL,
   };
+  console.log(currentUser);
   const newStory = await storyList.addStory(currentUser, submitFormInputs);
-  
+
   const newMarkUp = generateStoryMarkup(newStory);
 
   $allStoriesList.prepend(newMarkUp);
