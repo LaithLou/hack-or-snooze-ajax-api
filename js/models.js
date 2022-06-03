@@ -212,7 +212,7 @@ class User {
     }
   }
 
-  static async addFavotite(story) {
+  static async addFavorite(story) {
     const response = await axios({
       url: `${BASE_URL}/users/${story.username}/favorites/${story.storyId}`,
       method: "POST",
@@ -220,7 +220,15 @@ class User {
         token: currentUser.token,
       },
     });
+  }
 
-    const { favorites } = response.data;
+  static async deleteFavorit(story) {
+    const response = await axios({
+      url: `${BASE_URL}/user/${story.username}/farorites/${story.storyId}`,
+      method: "DELETE",
+      data: {
+        token: currentUser.token,
+      },
+    });
   }
 }
