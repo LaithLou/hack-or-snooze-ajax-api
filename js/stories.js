@@ -51,10 +51,19 @@ function putStoriesOnPage() {
   $allStoriesList.show();
 }
 
-function handleAddingNewStory(evt) {
+async function handleAddingNewStory(evt) {
   evt.preventDefault();
   console.log("hanedelADDIngNewStory");
-  let newStory = addStory();
+  const storyTitle = $("#story-title").val();
+  const storyAuthor = $("#story-author").val();
+  const storyURL = $("#story-url").val();
+  console.log('current user', currentUser);
+  console.log('inputs', storyAuthor, storyTitle, storyURL)
+  console.log('data obj', {story: {title: storyTitle, author: storyAuthor, url: storyURL}});
+  const dataStoryObj = {story: {author: storyAuthor, title: storyTitle, url: storyURL}};
+  let newStory = await storyList.addStory(currentUser, dataStoryObj);
+  console.log('new Story', newStory);
+  generateStoryMarkup(newStory);
 }
 
 $submitStory.on("click", handleAddingNewStory);

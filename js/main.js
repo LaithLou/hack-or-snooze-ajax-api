@@ -18,7 +18,6 @@ const $submitStory = $("#submit-story");
 
 const $submitForm = $("#submit-form");
 
-const storyTitle = $("#story-title").val();
 
 /** To make it easier for individual components to show just themselves, this
  * is a useful function that hides pretty much everything on the page. After

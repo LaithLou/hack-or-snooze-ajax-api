@@ -84,6 +84,7 @@ class StoryList {
         },
       },
     });
+    
     const { story } = response.data;
 
     return new Story({
